@@ -58,16 +58,16 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryControl.cs">
+    <Compile Include="NewFolder1\InventoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InventoryControl.Designer.cs">
+    <Compile Include="NewFolder1\InventoryControl.Designer.cs">
       <DependentUpon>InventoryControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="menuControl.cs">
+    <Compile Include="NewFolder1\menuControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="menuControl.Designer.cs">
+    <Compile Include="NewFolder1\menuControl.Designer.cs">
       <DependentUpon>menuControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ReceiptControl.cs">
@@ -81,6 +81,18 @@
     </Compile>
     <Compile Include="ServiceControl.Designer.cs">
       <DependentUpon>ServiceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeWork.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChangeWork.Designer.cs">
+      <DependentUpon>ChangeWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkControl.Designer.cs">
+      <DependentUpon>WorkControl.cs</DependentUpon>
     </Compile>
     <Compile Include="todoControl.cs">
       <SubType>UserControl</SubType>
@@ -102,10 +114,10 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InventoryControl.resx">
+    <EmbeddedResource Include="NewFolder1\InventoryControl.resx">
       <DependentUpon>InventoryControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menuControl.resx">
+    <EmbeddedResource Include="NewFolder1\menuControl.resx">
       <DependentUpon>menuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiptControl.resx">
@@ -113,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ServiceControl.resx">
       <DependentUpon>ServiceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeWork.resx">
+      <DependentUpon>ChangeWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkControl.resx">
+      <DependentUpon>WorkControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="todoControl.resx">
       <DependentUpon>todoControl.cs</DependentUpon>

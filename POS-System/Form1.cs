@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
+using System.Net.Http;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using _2nd_POS;
 
 
 namespace POS_System
 {
     public partial class Form1 : Form
     {
-        
+
+        private readonly HttpClient _httpClient;
+
         IniFile ini = new IniFile();
         int _employeeNo = 0;
 
@@ -25,33 +21,60 @@ namespace POS_System
             InitializeComponent();
 
             ini.Load("C:\\2nd-POS\\setting.ini");
-            typeTextBox.Text = ini["Setting"]["type"].ToString();
             uuidTextBox.Text = ini["Setting"]["uuid"].ToString();
             numberTextBox.Text = ini["Setting"]["employee"].ToString();
             showMsg.ForeColor = Color.Red;
-
+            _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("http://localhost:9800"); // API 엔드포인트 URL로 설정
+            _httpClient.DefaultRequestHeaders.Accept.Clear();
+            _httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        private void settingSaveBtn_Click(object sender, EventArgs e)
+        private async Task settingSaveBtn_ClickAsync(object sender, EventArgs e)
         {
-            ini["Setting"]["type"] = typeTextBox.Text;
-            ini["Setting"]["uuid"] = uuidTextBox.Text;
-            ini["Setting"]["employee"] = numberTextBox.Text;
-            ini.Save("C:\\2nd-POS\\setting.ini");
+            try
+            {
+                ini["Setting"]["uuid"] = uuidTextBox.Text;
+                ini["Setting"]["employee"] = numberTextBox.Text;
+                ini.Save("C:\\2nd-POS\\setting.ini");
 
 
-            showMsg.Text = "저장이 완료되었습니다.";
-            _employeeNo++;
+                await post();
+                showMsg.Text = "저장이 완료되었습니다.";
+                _employeeNo++;
 
-            Delay(1500);
-            showMsg.Text = "";
+                Delay(1500);
+                showMsg.Text = "";
+            }
+            catch (Exception ex)
+            {
+                showMsg.Text = ex.Message;
+                return;
+            }
+        }
+
+        private async Task post()
+        {
+                string postData = "{\"branchUuid\":\"" + uuidTextBox.Text + "\",\"employeeNo\":\"" + numberTextBox.Text + "\"}";
+                HttpResponseMessage response = await _httpClient.PostAsync("/branches", new StringContent(postData, Encoding.UTF8, "application/json"));
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string data = await response.Content.ReadAsStringAsync();
+                    // 여기서 data를 파싱하고 원하는 방식으로 처리합니다.
+                    showMsg.Text = data;
+                }
+                else
+                {
+                    throw new Exception("API 요청 실패 코드: " + response.StatusCode + "실패 사유 : " + response.Content.ReadAsStringAsync().Result.ToString());
+                }
         }
 
 
 
         private void startBtn_Click(object sender, EventArgs e)
         {
-            if(_employeeNo == 0)
+            if (_employeeNo == 0)
             {
                 showMsg.Text = "저장 후 시작해주세요.";
                 return;
@@ -81,7 +104,7 @@ namespace POS_System
                 form2.Show();
             }
 
-    }
+        }
 
 
         // 딜레이 메서드
