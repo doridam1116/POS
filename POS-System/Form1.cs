@@ -30,7 +30,7 @@ namespace POS_System
             _httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        private async Task settingSaveBtn_ClickAsync(object sender, EventArgs e)
+        private async void settingSaveBtn_ClickAsync(object sender, EventArgs e)
         {
             try
             {
@@ -38,8 +38,9 @@ namespace POS_System
                 ini["Setting"]["employee"] = numberTextBox.Text;
                 ini.Save("C:\\2nd-POS\\setting.ini");
 
+                Task task = post();
+                await task;
 
-                await post();
                 showMsg.Text = "저장이 완료되었습니다.";
                 _employeeNo++;
 
@@ -55,6 +56,8 @@ namespace POS_System
 
         private async Task post()
         {
+            try
+            {
                 string postData = "{\"branchUuid\":\"" + uuidTextBox.Text + "\",\"employeeNo\":\"" + numberTextBox.Text + "\"}";
                 HttpResponseMessage response = await _httpClient.PostAsync("/branches", new StringContent(postData, Encoding.UTF8, "application/json"));
 
@@ -68,6 +71,11 @@ namespace POS_System
                 {
                     throw new Exception("API 요청 실패 코드: " + response.StatusCode + "실패 사유 : " + response.Content.ReadAsStringAsync().Result.ToString());
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("에러: " + ex.Message);
+            }
         }
 
 
@@ -76,7 +84,7 @@ namespace POS_System
         {
             if (_employeeNo == 0)
             {
-                showMsg.Text = "저장 후 시작해주세요.";
+                showMsg.Text = "검증 후 시작해주세요.";
                 return;
             }
             this.Visible = false;
