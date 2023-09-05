@@ -135,6 +135,7 @@
             this.button2.TabIndex = 22;
             this.button2.Text = "출근 / 퇴근";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MessageLabel
             // 

@@ -47,5 +47,13 @@ namespace _2nd_POS.POSUI
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(employee.attendanceIn == null)
+            {
+
+            }
+        }
     }
 }
