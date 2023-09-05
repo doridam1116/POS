@@ -53,7 +53,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(637, 35);
+            this.panel2.Size = new System.Drawing.Size(637, 40);
             this.panel2.TabIndex = 11;
             // 
             // label1
@@ -64,7 +64,7 @@
             this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 18);
+            this.label1.Size = new System.Drawing.Size(112, 27);
             this.label1.TabIndex = 11;
             this.label1.Text = "담당자교대";
             // 
@@ -90,7 +90,7 @@
             this.timeLabel.Location = new System.Drawing.Point(305, 55);
             this.timeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(0, 30);
+            this.timeLabel.Size = new System.Drawing.Size(0, 44);
             this.timeLabel.TabIndex = 10;
             // 
             // panel3
@@ -125,6 +125,7 @@
             this.button2.TabIndex = 22;
             this.button2.Text = "교대확인";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -153,21 +154,25 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("새굴림", 9.75F);
             this.button1.Location = new System.Drawing.Point(490, 88);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 40);
             this.button1.TabIndex = 17;
             this.button1.Text = "조회";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("새굴림", 13F);
             this.textBox1.Location = new System.Drawing.Point(217, 89);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(273, 38);
             this.textBox1.TabIndex = 16;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.WordWrap = false;
             // 
             // label3
             // 

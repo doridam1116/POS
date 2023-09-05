@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,16 +61,17 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\InventoryControl.cs">
+    <Compile Include="util\Ini.cs" />
+    <Compile Include="InventoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NewFolder1\InventoryControl.Designer.cs">
+    <Compile Include="InventoryControl.Designer.cs">
       <DependentUpon>InventoryControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\menuControl.cs">
+    <Compile Include="menuControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NewFolder1\menuControl.Designer.cs">
+    <Compile Include="menuControl.Designer.cs">
       <DependentUpon>menuControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ReceiptControl.cs">
@@ -88,6 +92,7 @@
     <Compile Include="ChangeWork.Designer.cs">
       <DependentUpon>ChangeWork.cs</DependentUpon>
     </Compile>
+    <Compile Include="util\Setting.cs" />
     <Compile Include="WorkControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,10 +119,10 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFolder1\InventoryControl.resx">
+    <EmbeddedResource Include="InventoryControl.resx">
       <DependentUpon>InventoryControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFolder1\menuControl.resx">
+    <EmbeddedResource Include="menuControl.resx">
       <DependentUpon>menuControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiptControl.resx">
@@ -147,6 +152,7 @@
     <EmbeddedResource Include="SalesControl.resx">
       <DependentUpon>SalesControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -162,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\plusBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2nd-POS.DataAccess\2nd-POS.DataAccess.csproj">
+      <Project>{9d273a5a-c936-4f54-84ad-d9d64fe04506}</Project>
+      <Name>2nd-POS.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

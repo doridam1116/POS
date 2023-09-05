@@ -86,6 +86,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\2nd-POS.DataAccess\2nd-POS.DataAccess.csproj">
+      <Project>{9d273a5a-c936-4f54-84ad-d9d64fe04506}</Project>
+      <Name>2nd-POS.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\2nd-POS.POSUI\2nd-POS.POSUI.csproj">
       <Project>{a24b0e41-261c-4015-9321-2a0caf8015f8}</Project>
       <Name>2nd-POS.POSUI</Name>

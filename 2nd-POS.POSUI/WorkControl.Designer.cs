@@ -33,18 +33,18 @@
             this.button5 = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.MessageLabel = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.attendanceOutLabel = new System.Windows.Forms.Label();
+            this.attendanceInLabel = new System.Windows.Forms.Label();
+            this.employeeNameLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.employeeTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -103,13 +103,13 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.MessageLabel);
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.attendanceOutLabel);
+            this.panel3.Controls.Add(this.attendanceInLabel);
+            this.panel3.Controls.Add(this.employeeNameLabel);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.employeeTextBox);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
@@ -121,32 +121,74 @@
             this.panel3.Size = new System.Drawing.Size(638, 435);
             this.panel3.TabIndex = 0;
             // 
-            // label8
+            // button2
             // 
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Location = new System.Drawing.Point(219, 202);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(363, 38);
-            this.label8.TabIndex = 20;
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("굴림", 10F);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(302, 367);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(151, 49);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "출근 / 퇴근";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // label7
+            // MessageLabel
             // 
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Location = new System.Drawing.Point(219, 165);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(363, 38);
-            this.label7.TabIndex = 19;
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MessageLabel.BackColor = System.Drawing.Color.White;
+            this.MessageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MessageLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MessageLabel.Location = new System.Drawing.Point(61, 252);
+            this.MessageLabel.Name = "MessageLabel";
+            this.MessageLabel.Size = new System.Drawing.Size(521, 88);
+            this.MessageLabel.TabIndex = 21;
+            this.MessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // button3
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(219, 128);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(363, 38);
-            this.label6.TabIndex = 18;
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("굴림", 10F);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(462, 367);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(151, 49);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "닫기";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // attendanceOutLabel
+            // 
+            this.attendanceOutLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.attendanceOutLabel.Location = new System.Drawing.Point(219, 202);
+            this.attendanceOutLabel.Name = "attendanceOutLabel";
+            this.attendanceOutLabel.Size = new System.Drawing.Size(363, 38);
+            this.attendanceOutLabel.TabIndex = 20;
+            this.attendanceOutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // attendanceInLabel
+            // 
+            this.attendanceInLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.attendanceInLabel.Location = new System.Drawing.Point(219, 165);
+            this.attendanceInLabel.Name = "attendanceInLabel";
+            this.attendanceInLabel.Size = new System.Drawing.Size(363, 38);
+            this.attendanceInLabel.TabIndex = 19;
+            this.attendanceInLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // employeeNameLabel
+            // 
+            this.employeeNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.employeeNameLabel.Location = new System.Drawing.Point(219, 128);
+            this.employeeNameLabel.Name = "employeeNameLabel";
+            this.employeeNameLabel.Size = new System.Drawing.Size(363, 38);
+            this.employeeNameLabel.TabIndex = 18;
+            this.employeeNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -156,15 +198,16 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "조회";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_ClickAsync);
             // 
-            // textBox1
+            // employeeTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(219, 79);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 38);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.employeeTextBox.Location = new System.Drawing.Point(219, 79);
+            this.employeeTextBox.Multiline = true;
+            this.employeeTextBox.Name = "employeeTextBox";
+            this.employeeTextBox.Size = new System.Drawing.Size(273, 38);
+            this.employeeTextBox.TabIndex = 16;
+            this.employeeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -218,48 +261,6 @@
             this.label2.Text = "ID 카드번호";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Location = new System.Drawing.Point(61, 252);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(521, 88);
-            this.label9.TabIndex = 21;
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("굴림", 10F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(462, 367);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 49);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "닫기";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("굴림", 10F);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(302, 367);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 49);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "출근 / 퇴근";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // WorkControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -288,12 +289,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label attendanceOutLabel;
+        private System.Windows.Forms.Label attendanceInLabel;
+        private System.Windows.Forms.Label employeeNameLabel;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox employeeTextBox;
+        private System.Windows.Forms.Label MessageLabel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }

@@ -4,7 +4,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using _2nd_POS.DataAccess;
+using Newtonsoft.Json;
 
 namespace POS_System
 {
@@ -12,6 +13,10 @@ namespace POS_System
     {
 
         private readonly HttpClient _httpClient;
+
+        private _2nd_POS.DataAccess.Api api;
+
+        private Branch branch;
 
         IniFile ini = new IniFile();
         int _employeeNo = 0;
@@ -24,22 +29,24 @@ namespace POS_System
             uuidTextBox.Text = ini["Setting"]["uuid"].ToString();
             numberTextBox.Text = ini["Setting"]["employee"].ToString();
             showMsg.ForeColor = Color.Red;
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("http://localhost:9800"); // API 엔드포인트 URL로 설정
-            _httpClient.DefaultRequestHeaders.Accept.Clear();
-            _httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            api = new _2nd_POS.DataAccess.Api();
         }
 
         private async void settingSaveBtn_ClickAsync(object sender, EventArgs e)
         {
             try
             {
+                string postData = "{\"branchUuid\":\"" + uuidTextBox.Text + "\",\"employeeNo\":\"" + numberTextBox.Text + "\"}";
+
+                string data = await api.post(postData);
+
+                branch = JsonConvert.DeserializeObject<Branch>(data);
+
                 ini["Setting"]["uuid"] = uuidTextBox.Text;
                 ini["Setting"]["employee"] = numberTextBox.Text;
+                ini["Setting"]["employeeName"] = branch.employeeName;
                 ini.Save("C:\\2nd-POS\\setting.ini");
-
-                Task task = post();
-                await task;
 
                 showMsg.Text = "저장이 완료되었습니다.";
                 _employeeNo++;
@@ -54,30 +61,6 @@ namespace POS_System
             }
         }
 
-        private async Task post()
-        {
-            try
-            {
-                string postData = "{\"branchUuid\":\"" + uuidTextBox.Text + "\",\"employeeNo\":\"" + numberTextBox.Text + "\"}";
-                HttpResponseMessage response = await _httpClient.PostAsync("/branches", new StringContent(postData, Encoding.UTF8, "application/json"));
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string data = await response.Content.ReadAsStringAsync();
-                    // 여기서 data를 파싱하고 원하는 방식으로 처리합니다.
-                    showMsg.Text = data;
-                }
-                else
-                {
-                    throw new Exception("API 요청 실패 코드: " + response.StatusCode + "실패 사유 : " + response.Content.ReadAsStringAsync().Result.ToString());
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("에러: " + ex.Message);
-            }
-        }
-
 
 
         private void startBtn_Click(object sender, EventArgs e)
@@ -87,6 +70,7 @@ namespace POS_System
                 showMsg.Text = "검증 후 시작해주세요.";
                 return;
             }
+
             this.Visible = false;
 
             // 현재 연결된 모니터들 가져오기
@@ -127,6 +111,12 @@ namespace POS_System
                 dateTimeNow = DateTime.Now;
             }
             return;
+        }
+
+        public void changeEmployee(int employeeNo)
+        {
+            ini["Setting"]["employee"] = employeeNo;
+            ini.Save("C:\\2nd-POS\\setting.ini");
         }
 
     }
