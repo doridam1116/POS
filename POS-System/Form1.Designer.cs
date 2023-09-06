@@ -28,107 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.typeTextBox = new System.Windows.Forms.TextBox();
             this.uuidTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.numberTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.startBtn = new System.Windows.Forms.Button();
             this.settingSaveBtn = new System.Windows.Forms.Button();
             this.showMsg = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numberTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(52, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "유형 선택";
-            // 
-            // typeTextBox
-            // 
-            this.typeTextBox.Location = new System.Drawing.Point(172, 105);
-            this.typeTextBox.Name = "typeTextBox";
-            this.typeTextBox.Size = new System.Drawing.Size(238, 28);
-            this.typeTextBox.TabIndex = 1;
             // 
             // uuidTextBox
             // 
-            this.uuidTextBox.Location = new System.Drawing.Point(172, 173);
+            this.uuidTextBox.Location = new System.Drawing.Point(120, 115);
+            this.uuidTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uuidTextBox.Name = "uuidTextBox";
-            this.uuidTextBox.Size = new System.Drawing.Size(238, 28);
+            this.uuidTextBox.Size = new System.Drawing.Size(258, 21);
             this.uuidTextBox.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(52, 173);
+            this.label2.Location = new System.Drawing.Point(36, 115);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 28);
+            this.label2.Size = new System.Drawing.Size(43, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "UUID";
-            // 
-            // numberTextBox
-            // 
-            this.numberTextBox.Location = new System.Drawing.Point(172, 236);
-            this.numberTextBox.Name = "numberTextBox";
-            this.numberTextBox.Size = new System.Drawing.Size(238, 28);
-            this.numberTextBox.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(52, 236);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "직원 코드";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(52, 302);
+            this.label4.Location = new System.Drawing.Point(36, 201);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 28);
+            this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 6;
             this.label4.Text = "Message : ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(425, 105);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 28);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "(0, 1)";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(425, 236);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 28);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "(직원 번호)";
             // 
             // startBtn
             // 
             this.startBtn.Font = new System.Drawing.Font("맑은 고딕", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.startBtn.Location = new System.Drawing.Point(750, 248);
+            this.startBtn.Location = new System.Drawing.Point(525, 165);
+            this.startBtn.Margin = new System.Windows.Forms.Padding(2);
             this.startBtn.Name = "startBtn";
-            this.startBtn.Size = new System.Drawing.Size(210, 109);
+            this.startBtn.Size = new System.Drawing.Size(147, 73);
             this.startBtn.TabIndex = 11;
             this.startBtn.Text = "시작";
             this.startBtn.UseVisualStyleBackColor = true;
@@ -137,40 +84,70 @@
             // settingSaveBtn
             // 
             this.settingSaveBtn.Font = new System.Drawing.Font("맑은 고딕", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.settingSaveBtn.Location = new System.Drawing.Point(750, 92);
+            this.settingSaveBtn.Location = new System.Drawing.Point(525, 61);
+            this.settingSaveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.settingSaveBtn.Name = "settingSaveBtn";
-            this.settingSaveBtn.Size = new System.Drawing.Size(210, 109);
+            this.settingSaveBtn.Size = new System.Drawing.Size(147, 73);
             this.settingSaveBtn.TabIndex = 12;
-            this.settingSaveBtn.Text = "저장";
+            this.settingSaveBtn.Text = "검증";
             this.settingSaveBtn.UseVisualStyleBackColor = true;
-            this.settingSaveBtn.Click += new System.EventHandler(this.settingSaveBtn_Click);
+            this.settingSaveBtn.Click += new System.EventHandler(this.settingSaveBtn_ClickAsync);
             // 
             // showMsg
             // 
             this.showMsg.AutoSize = true;
             this.showMsg.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
-            this.showMsg.Location = new System.Drawing.Point(172, 302);
+            this.showMsg.Location = new System.Drawing.Point(120, 201);
+            this.showMsg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.showMsg.Name = "showMsg";
-            this.showMsg.Size = new System.Drawing.Size(0, 28);
+            this.showMsg.Size = new System.Drawing.Size(0, 19);
             this.showMsg.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(36, 157);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 19);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "직원 코드";
+            // 
+            // numberTextBox
+            // 
+            this.numberTextBox.Location = new System.Drawing.Point(120, 157);
+            this.numberTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.numberTextBox.Name = "numberTextBox";
+            this.numberTextBox.Size = new System.Drawing.Size(168, 21);
+            this.numberTextBox.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(298, 157);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 19);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "(직원 번호)";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 712);
+            this.ClientSize = new System.Drawing.Size(701, 475);
             this.Controls.Add(this.showMsg);
             this.Controls.Add(this.settingSaveBtn);
             this.Controls.Add(this.startBtn);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numberTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.uuidTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.typeTextBox);
-            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -179,19 +156,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox typeTextBox;
         private System.Windows.Forms.TextBox uuidTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox numberTextBox;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.Button settingSaveBtn;
         private System.Windows.Forms.Label showMsg;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox numberTextBox;
+        private System.Windows.Forms.Label label7;
     }
 }
 

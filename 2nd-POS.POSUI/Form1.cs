@@ -21,6 +21,11 @@ namespace POSUI
         ServiceControl service;
         InventoryControl inventory;
         ReceiptControl receipt;
+        WorkControl work;
+        ChangeWorkControl change;
+        IniFile ini; 
+
+
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +35,12 @@ namespace POSUI
 
             timer1.Tick += Timer1_Tick;
             timer1.Start();
+
+            ini = new IniFile();
+            ini.Load("C:\\2nd-POS\\setting.ini");
+
+
+            workerName.Text = ini["Setting"]["employeeName"].ToString();
 
             bookmarkLoad();
         }
@@ -105,5 +116,24 @@ namespace POSUI
             this.Controls.Add(receipt);
             receipt.BringToFront();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            work = new WorkControl();
+            work.Location = new Point(0, 0);
+            work.Visible = true;
+            this.Controls.Add(work);
+            work.BringToFront();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            change = new ChangeWorkControl();
+            change.Location = new Point(0, 0);
+            change.Visible = true;
+            this.Controls.Add(change);
+            change.BringToFront();
+        }
+
     }
 }

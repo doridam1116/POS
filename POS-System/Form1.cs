@@ -1,22 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
+using System.Net.Http;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using _2nd_POS;
-
+using _2nd_POS.DataAccess;
+using Newtonsoft.Json;
 
 namespace POS_System
 {
     public partial class Form1 : Form
     {
-        
+
+        private readonly HttpClient _httpClient;
+
+        private _2nd_POS.DataAccess.Api api;
+
+        private Branch branch;
+
         IniFile ini = new IniFile();
         int _employeeNo = 0;
 
@@ -25,37 +26,51 @@ namespace POS_System
             InitializeComponent();
 
             ini.Load("C:\\2nd-POS\\setting.ini");
-            typeTextBox.Text = ini["Setting"]["type"].ToString();
             uuidTextBox.Text = ini["Setting"]["uuid"].ToString();
             numberTextBox.Text = ini["Setting"]["employee"].ToString();
             showMsg.ForeColor = Color.Red;
 
+            api = new _2nd_POS.DataAccess.Api();
         }
 
-        private void settingSaveBtn_Click(object sender, EventArgs e)
+        private async void settingSaveBtn_ClickAsync(object sender, EventArgs e)
         {
-            ini["Setting"]["type"] = typeTextBox.Text;
-            ini["Setting"]["uuid"] = uuidTextBox.Text;
-            ini["Setting"]["employee"] = numberTextBox.Text;
-            ini.Save("C:\\2nd-POS\\setting.ini");
+            try
+            {
+                string postData = "{\"branchUuid\":\"" + uuidTextBox.Text + "\",\"employeeNo\":\"" + numberTextBox.Text + "\"}";
 
+                string data = await api.post("",postData);
 
-            showMsg.Text = "저장이 완료되었습니다.";
-            _employeeNo++;
+                branch = JsonConvert.DeserializeObject<Branch>(data);
 
-            Delay(1500);
-            showMsg.Text = "";
+                ini["Setting"]["uuid"] = uuidTextBox.Text;
+                ini["Setting"]["employee"] = numberTextBox.Text;
+                ini["Setting"]["employeeName"] = branch.employeeName;
+                ini.Save("C:\\2nd-POS\\setting.ini");
+
+                showMsg.Text = "저장이 완료되었습니다.";
+                _employeeNo++;
+
+                Delay(1500);
+                showMsg.Text = "";
+            }
+            catch (Exception ex)
+            {
+                showMsg.Text = ex.Message;
+                return;
+            }
         }
 
 
 
         private void startBtn_Click(object sender, EventArgs e)
         {
-            if(_employeeNo == 0)
+            if (_employeeNo == 0)
             {
-                showMsg.Text = "저장 후 시작해주세요.";
+                showMsg.Text = "검증 후 시작해주세요.";
                 return;
             }
+
             this.Visible = false;
 
             // 현재 연결된 모니터들 가져오기
@@ -81,7 +96,7 @@ namespace POS_System
                 form2.Show();
             }
 
-    }
+        }
 
 
         // 딜레이 메서드
@@ -96,6 +111,12 @@ namespace POS_System
                 dateTimeNow = DateTime.Now;
             }
             return;
+        }
+
+        public void changeEmployee(int employeeNo)
+        {
+            ini["Setting"]["employee"] = employeeNo;
+            ini.Save("C:\\2nd-POS\\setting.ini");
         }
 
     }
