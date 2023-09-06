@@ -11,8 +11,8 @@ namespace _2nd_POS.DataAccess
         public String branchUuid;
         public int employeeNo;
         public String employeeName;
-        public DateTime? attendanceIn;
-        public DateTime? attendanceOut;
+        public string attendanceIn;
+        public string attendanceOut;
 
 
     }

@@ -31,28 +31,62 @@ namespace _2nd_POS.POSUI
 
         private async void button1_ClickAsync(object sender, EventArgs e)
         {
+            if(employeeTextBox.Text == "")
+            {
+                return;
+            }
             string employeeNo = "/branches/employee/find?employeeNo=" + employeeTextBox.Text;
 
             string data = await api.GetData(employeeNo);
 
-            employee = JsonConvert.DeserializeObject<Employee>(data);
-
-            employeeNameLabel.Text = employee.employeeName;
-
-            if(employee.attendanceIn == null)
+            if (data.Contains("{\"branchUuid\":null"))
             {
+                employeeTextBox.Text = "";
+                employeeNameLabel.Text = "-";
                 attendanceInLabel.Text = "-";
                 attendanceOutLabel.Text = "-";
-                return;
+                MessageLabel.Text = "일치하는 직원이 없습니다.";
+            }
+            else
+            {
+                employee = JsonConvert.DeserializeObject<Employee>(data);
+                employeeNameLabel.Text = employee.employeeName;
+                if (employee.attendanceIn == null)
+                {
+                    attendanceInLabel.Text = "-";
+                    attendanceOutLabel.Text = "-";
+                }
+                else
+                {
+                    attendanceInLabel.Text = employee.attendanceIn;
+                    attendanceOutLabel.Text = employee.attendanceOut ?? "-";
+                }
+
             }
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-            if(employee.attendanceIn == null)
-            {
+            string data;
+            string url = "/employee/attendance";
 
+            if (employeeTextBox.Text == "")
+            {
+                return;
+            }
+
+            if (employee != null && employee.attendanceIn == null)
+            {
+                data = "{\"employeeNo\":\"" + employee.employeeNo + "\"}";
+
+                string result = await api.post(url, data);
+            }
+            else if(employee != null  && employee.attendanceOut == null)
+            {
+                data = "{\"employeeNo\":\"" + employee.employeeNo + "\",\"attendanceIn\":\"" + employee.attendanceIn + "\"}";
+
+                string result = await api.post(url, data);
             }
         }
     }

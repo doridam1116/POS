@@ -39,7 +39,7 @@ namespace POS_System
             {
                 string postData = "{\"branchUuid\":\"" + uuidTextBox.Text + "\",\"employeeNo\":\"" + numberTextBox.Text + "\"}";
 
-                string data = await api.post(postData);
+                string data = await api.post("",postData);
 
                 branch = JsonConvert.DeserializeObject<Branch>(data);
 
