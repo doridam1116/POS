@@ -48,6 +48,7 @@
     <Compile Include="Api.cs" />
     <Compile Include="Branch.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="MessageObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

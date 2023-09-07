@@ -17,6 +17,8 @@ namespace _2nd_POS.POSUI
         private Api api;
 
         private Employee employee;
+
+
         public WorkControl()
         {
             InitializeComponent();
@@ -35,11 +37,12 @@ namespace _2nd_POS.POSUI
             {
                 return;
             }
+
             string employeeNo = "/branches/employee/find?employeeNo=" + employeeTextBox.Text;
 
             string data = await api.GetData(employeeNo);
 
-            if (data.Contains("{\"branchUuid\":null"))
+            if (data.Contains("{\"employeeName\":null"))
             {
                 employeeTextBox.Text = "";
                 employeeNameLabel.Text = "-";
@@ -76,18 +79,16 @@ namespace _2nd_POS.POSUI
                 return;
             }
 
-            if (employee != null && employee.attendanceIn == null)
-            {
                 data = "{\"employeeNo\":\"" + employee.employeeNo + "\"}";
 
                 string result = await api.post(url, data);
-            }
-            else if(employee != null  && employee.attendanceOut == null)
-            {
-                data = "{\"employeeNo\":\"" + employee.employeeNo + "\",\"attendanceIn\":\"" + employee.attendanceIn + "\"}";
 
-                string result = await api.post(url, data);
-            }
+                MessageObj message = JsonConvert.DeserializeObject<MessageObj>(result);
+
+                MessageLabel.Text = message.getMsg();
+
+                button1_ClickAsync(sender, e);
+
         }
     }
 }
