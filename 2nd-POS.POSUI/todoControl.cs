@@ -49,11 +49,11 @@ namespace _2nd_POS.POSUI
             todoDateLabel.Text = _date.ToString("yyyy-MM-dd");
         }
 
-        private async Task button6_ClickAsync(object sender, EventArgs e)
+        private void button6_ClickAsync(object sender, EventArgs e)
         {
             string data = Newtonsoft.Json.JsonConvert.SerializeObject(todo);
-            string postData = await api.post("/todos/todoyn",data);
-            MessageBox.Show(postData);
+            //string postData = await api.post("/todos/todoyn",data);
+            //MessageBox.Show(postData);
         }
     }
 }

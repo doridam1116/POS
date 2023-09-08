@@ -171,13 +171,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            string result = await api.post("/branches" + url, data);
-
-            MessageObj message = JsonConvert.DeserializeObject<MessageObj>(result);
-
-            MessageLabel.Text = message.getMsg();
-
-            button1_ClickAsync(sender, e);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "menuControl";
             this.Size = new System.Drawing.Size(1024, 768);
             this.panel2.ResumeLayout(false);
