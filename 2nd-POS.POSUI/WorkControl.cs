@@ -39,7 +39,7 @@ namespace _2nd_POS.POSUI
 
             string data = await api.GetData(employeeNo);
 
-            if (data.Contains("{\"branchUuid\":null"))
+            if (data.Contains("{\"employeeName\":null"))
             {
                 employeeTextBox.Text = "";
                 employeeNameLabel.Text = "-";
@@ -76,18 +76,15 @@ namespace _2nd_POS.POSUI
                 return;
             }
 
-            if (employee != null && employee.attendanceIn == null)
-            {
                 data = "{\"employeeNo\":\"" + employee.employeeNo + "\"}";
+            string result = await api.post("/branches" + url, data);
 
-                string result = await api.post(url, data);
-            }
-            else if(employee != null  && employee.attendanceOut == null)
-            {
-                data = "{\"employeeNo\":\"" + employee.employeeNo + "\",\"attendanceIn\":\"" + employee.attendanceIn + "\"}";
+            MessageObj message = JsonConvert.DeserializeObject<MessageObj>(result);
 
-                string result = await api.post(url, data);
-            }
+            MessageLabel.Text = message.getMsg();
+
+            button1_ClickAsync(sender, e);
+
         }
     }
 }

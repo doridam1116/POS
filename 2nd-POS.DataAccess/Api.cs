@@ -24,7 +24,7 @@ namespace _2nd_POS.DataAccess
         {
             try
             {
-                HttpResponseMessage response = await _httpClient.PostAsync("/branches"+url, new StringContent(postData, Encoding.UTF8, "application/json"));
+                HttpResponseMessage response = await _httpClient.PostAsync(url, new StringContent(postData, Encoding.UTF8, "application/json"));
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -79,7 +79,7 @@ namespace _2nd_POS.DataAccess
             httpContent.Headers.Add("X-HTTP-Method-Override", "PATCH"); // PATCH 메서드 사용
 
             // PATCH 요청 보내기
-            HttpResponseMessage response = await _httpClient.PostAsync("/branches"+url, httpContent);
+            HttpResponseMessage response = await _httpClient.PostAsync(url, httpContent);
 
             // 응답 처리
             if (response.IsSuccessStatusCode)
