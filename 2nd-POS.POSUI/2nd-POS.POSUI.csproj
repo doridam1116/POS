@@ -61,6 +61,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="LottoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LottoControl.Designer.cs">
+      <DependentUpon>LottoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="util\Ini.cs" />
     <Compile Include="InventoryControl.cs">
       <SubType>UserControl</SubType>

@@ -52,9 +52,8 @@
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.timeLabel);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1024, 62);
+            this.panel2.Size = new System.Drawing.Size(1463, 93);
             this.panel2.TabIndex = 13;
             // 
             // label1
@@ -62,10 +61,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("휴먼모음T", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(19, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.Size = new System.Drawing.Size(92, 27);
             this.label1.TabIndex = 11;
             this.label1.Text = "전체메뉴";
             // 
@@ -75,10 +73,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("굴림", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(971, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(1387, 15);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 40);
+            this.button5.Size = new System.Drawing.Size(57, 60);
             this.button5.TabIndex = 11;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = true;
@@ -89,10 +86,9 @@
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("휴먼모음T", 20F);
             this.timeLabel.ForeColor = System.Drawing.Color.White;
-            this.timeLabel.Location = new System.Drawing.Point(305, 55);
-            this.timeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.timeLabel.Location = new System.Drawing.Point(436, 82);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(0, 30);
+            this.timeLabel.Size = new System.Drawing.Size(0, 44);
             this.timeLabel.TabIndex = 10;
             // 
             // panel1
@@ -165,7 +161,7 @@
             // 
             // menuControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -173,7 +169,7 @@
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "menuControl";
-            this.Size = new System.Drawing.Size(1024, 768);
+            this.Size = new System.Drawing.Size(1463, 1152);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

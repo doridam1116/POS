@@ -17,6 +17,8 @@ namespace _2nd_POS.POSUI
         private Api api;
 
         private Employee employee;
+
+
         public WorkControl()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace _2nd_POS.POSUI
             {
                 return;
             }
+
             string employeeNo = "/branches/employee/find?employeeNo=" + employeeTextBox.Text;
 
             string data = await api.GetData(employeeNo);
