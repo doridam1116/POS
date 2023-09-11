@@ -50,6 +50,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="MessageObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Todo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

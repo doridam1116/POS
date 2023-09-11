@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace _2nd_POS.POSUI
 {
-    public partial class menuControl : UserControl
+    public partial class LottoControl : UserControl
     {
-        public menuControl()
+        public LottoControl()
         {
             InitializeComponent();
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
+            this.Controls.Remove(this);
+            this.Dispose();
         }
     }
 }

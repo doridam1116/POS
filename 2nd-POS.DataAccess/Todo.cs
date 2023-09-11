@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2nd_POS.DataAccess
 {
-    internal class Todo
+    public class Todo
     {
         private String branchUuid
         {
@@ -25,13 +25,13 @@ namespace _2nd_POS.DataAccess
             get { return todoTitle; }
         }
 
-        private int todoYn 
-        { 
+        private int todoYn
+        {
             set { todoYn = value; }
             get { return todoYn; }
         }
 
-        private int todoNo 
+        private int todoNo
         {
             set { todoNo = value; }
             get { return todoNo; }

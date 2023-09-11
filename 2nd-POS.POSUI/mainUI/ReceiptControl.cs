@@ -10,37 +10,32 @@ using System.Windows.Forms;
 
 namespace _2nd_POS.POSUI
 {
-    public partial class SalesControl : UserControl
+    public partial class PriceReceiptControl : UserControl
     {
-        public SalesControl()
+        public PriceReceiptControl()
         {
             InitializeComponent();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Controls.Remove(this);
+            this.Dispose();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SalesControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
         private void button7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+            MessageBox.Show("asd");
+        }
+
+        private void panel8_MouseClick(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }

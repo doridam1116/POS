@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace _2nd_POS.POSUI
 {
-    public partial class ServiceControl : UserControl
+    public partial class LogisReceive : UserControl
     {
-        public ServiceControl()
+        public LogisReceive()
         {
             InitializeComponent();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            
+            this.Controls.Remove(this);
+            this.Dispose();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace POSUI
         SalesControl sales;
         ServiceControl service;
         InventoryControl inventory;
-        ReceiptControl receipt;
+        PriceReceiptControl receipt;
         WorkControl work;
         ChangeWorkControl change;
         IniFile ini; 
@@ -110,7 +110,7 @@ namespace POSUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            receipt = new ReceiptControl();
+            receipt = new PriceReceiptControl();
             receipt.Location = new Point(0, 0);
             receipt.Visible = true;
             this.Controls.Add(receipt);

@@ -28,7 +28,8 @@ namespace _2nd_POS.POSUI
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Controls.Remove(this);
+            this.Dispose();
         }
 
         private async void button1_ClickAsync(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace _2nd_POS.POSUI
         private async void button2_Click(object sender, EventArgs e)
         {
             string data;
-            string url = "/employee/attendance";
+            string url = "/branches/employee/attendance";
 
             if (employeeTextBox.Text == "")
             {
