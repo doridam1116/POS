@@ -1,6 +1,6 @@
-﻿namespace _2nd_POS.POSUI
+﻿namespace _2nd_POS.POSUI.inventory
 {
-    partial class SportsToTo
+    partial class MissStockRegistercontrol
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -45,7 +45,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 62);
-            this.panel2.TabIndex = 14;
+            this.panel2.TabIndex = 15;
             // 
             // label1
             // 
@@ -55,9 +55,9 @@
             this.label1.Location = new System.Drawing.Point(13, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 18);
+            this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 11;
-            this.label1.Text = "스포츠 토토 판매";
+            this.label1.Text = "오출등록";
             // 
             // button5
             // 
@@ -65,7 +65,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("굴림", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(971, 10);
+            this.button5.Location = new System.Drawing.Point(971, 11);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(40, 40);
@@ -85,12 +85,12 @@
             this.timeLabel.Size = new System.Drawing.Size(0, 30);
             this.timeLabel.TabIndex = 10;
             // 
-            // SportsToTo
+            // MissStockRegistercontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Name = "SportsToTo";
+            this.Name = "MissStockRegistercontrol";
             this.Size = new System.Drawing.Size(1024, 768);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

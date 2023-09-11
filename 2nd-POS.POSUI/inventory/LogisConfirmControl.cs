@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _2nd_POS.POSUI
+namespace _2nd_POS.POSUI.inventory
 {
-    public partial class LogisReceive : UserControl
+    public partial class LogisConfirmControl : UserControl
     {
-        public LogisReceive()
+        public LogisConfirmControl()
         {
             InitializeComponent();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Controls.Remove(this);
             this.Dispose();
+            this.Controls.Remove(this);
         }
     }
 }

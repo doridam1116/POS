@@ -76,17 +76,17 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="service\LogisAccept.cs">
+    <Compile Include="service\LogisAcceptControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="service\LogisAccept.Designer.cs">
-      <DependentUpon>LogisAccept.cs</DependentUpon>
+    <Compile Include="service\LogisAcceptControl.Designer.cs">
+      <DependentUpon>LogisAcceptControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="service\LogisReceive.cs">
+    <Compile Include="service\LogisReceiveControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="service\LogisReceive.Designer.cs">
-      <DependentUpon>LogisReceive.cs</DependentUpon>
+    <Compile Include="service\LogisReceiveControl.Designer.cs">
+      <DependentUpon>LogisReceiveControl.cs</DependentUpon>
     </Compile>
     <Compile Include="service\LottoControl.cs">
       <SubType>UserControl</SubType>
@@ -94,11 +94,23 @@
     <Compile Include="service\LottoControl.Designer.cs">
       <DependentUpon>LottoControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="service\SportsToTo.cs">
+    <Compile Include="service\SportsToToControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="service\SportsToTo.Designer.cs">
-      <DependentUpon>SportsToTo.cs</DependentUpon>
+    <Compile Include="service\SportsToToControl.Designer.cs">
+      <DependentUpon>SportsToToControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="service\TmoneyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="service\TmoneyControl.Designer.cs">
+      <DependentUpon>TmoneyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="service\TrafficCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="service\TrafficCardControl.Designer.cs">
+      <DependentUpon>TrafficCardControl.cs</DependentUpon>
     </Compile>
     <Compile Include="util\Ini.cs" />
     <Compile Include="mainUI\InventoryControl.cs">
@@ -161,11 +173,11 @@
     <EmbeddedResource Include="mainUI\InventoryControl.resx">
       <DependentUpon>InventoryControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="service\LogisAccept.resx">
-      <DependentUpon>LogisAccept.cs</DependentUpon>
+    <EmbeddedResource Include="service\LogisAcceptControl.resx">
+      <DependentUpon>LogisAcceptControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="service\LogisReceive.resx">
-      <DependentUpon>LogisReceive.cs</DependentUpon>
+    <EmbeddedResource Include="service\LogisReceiveControl.resx">
+      <DependentUpon>LogisReceiveControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="service\LottoControl.resx">
       <DependentUpon>LottoControl.cs</DependentUpon>
@@ -182,8 +194,8 @@
     <EmbeddedResource Include="mainUI\ChangeWork.resx">
       <DependentUpon>ChangeWork.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="service\SportsToTo.resx">
-      <DependentUpon>SportsToTo.cs</DependentUpon>
+    <EmbeddedResource Include="service\SportsToToControl.resx">
+      <DependentUpon>SportsToToControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainUI\WorkControl.resx">
       <DependentUpon>WorkControl.cs</DependentUpon>
@@ -202,6 +214,12 @@
     </Compile>
     <EmbeddedResource Include="mainUI\SalesControl.resx">
       <DependentUpon>SalesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="service\TmoneyControl.resx">
+      <DependentUpon>TmoneyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="service\TrafficCardControl.resx">
+      <DependentUpon>TrafficCardControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

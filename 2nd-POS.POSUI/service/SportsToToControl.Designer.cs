@@ -1,6 +1,6 @@
 ﻿namespace _2nd_POS.POSUI
 {
-    partial class LogisReceive
+    partial class SportsToToControl
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -45,7 +45,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 62);
-            this.panel2.TabIndex = 15;
+            this.panel2.TabIndex = 14;
             // 
             // label1
             // 
@@ -55,9 +55,9 @@
             this.label1.Location = new System.Drawing.Point(13, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.Size = new System.Drawing.Size(117, 18);
             this.label1.TabIndex = 11;
-            this.label1.Text = "택배 수령";
+            this.label1.Text = "스포츠 토토 판매";
             // 
             // button5
             // 
@@ -85,12 +85,12 @@
             this.timeLabel.Size = new System.Drawing.Size(0, 30);
             this.timeLabel.TabIndex = 10;
             // 
-            // LogisReceive
+            // SportsToTo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Name = "LogisReceive";
+            this.Name = "SportsToTo";
             this.Size = new System.Drawing.Size(1024, 768);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

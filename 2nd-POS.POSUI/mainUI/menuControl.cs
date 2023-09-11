@@ -13,9 +13,9 @@ namespace _2nd_POS.POSUI
     public partial class menuControl : UserControl
     {
         private LottoControl lotto;
-        private LogisAccept logisAccept;
-        private LogisReceive logisReceive;
-        private SportsToTo sportsToTo;
+        private LogisAcceptControl logisAccept;
+        private LogisReceiveControl logisReceive;
+        private SportsToToControl sportsToTo;
 
         public menuControl()
         {
@@ -49,7 +49,7 @@ namespace _2nd_POS.POSUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            logisAccept = new LogisAccept();
+            logisAccept = new LogisAcceptControl();
             logisAccept.Location = new Point(0, 0);
             this.Controls.Add(logisAccept);
             logisAccept.BringToFront();
@@ -57,7 +57,7 @@ namespace _2nd_POS.POSUI
 
         private void button6_Click(object sender, EventArgs e)
         {
-            logisReceive = new LogisReceive();
+            logisReceive = new LogisReceiveControl();
             logisReceive.Location = new Point(0, 0);
             this.Controls.Add(logisReceive);
             logisReceive.BringToFront();
@@ -65,7 +65,7 @@ namespace _2nd_POS.POSUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            sportsToTo = new SportsToTo();
+            sportsToTo = new SportsToToControl();
             sportsToTo.Location = new Point(0, 0);
             this.Controls.Add(sportsToTo);
             sportsToTo.BringToFront();

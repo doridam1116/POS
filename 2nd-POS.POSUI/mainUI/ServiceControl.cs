@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _2nd_POS.POSUI.service;
 
 namespace _2nd_POS.POSUI
 {
     public partial class ServiceControl : UserControl
     {
         private LottoControl lotto;
-        private SportsToTo sportsToTo;
-        private LogisAccept logisAccept;
-        private LogisReceive logisReceive;
+        private SportsToToControl sportsToTo;
+        private LogisAcceptControl logisAccept;
+        private LogisReceiveControl logisReceive;
+        private TrafficCardControl trafficCard;
+        private TmoneyControl tmoney;
 
         public ServiceControl()
         {
@@ -44,7 +47,7 @@ namespace _2nd_POS.POSUI
 
         private void button13_Click(object sender, EventArgs e)
         {
-            sportsToTo = new SportsToTo();
+            sportsToTo = new SportsToToControl();
             sportsToTo.Location = new Point(0,0);
             this.Controls.Add(sportsToTo);
             sportsToTo.BringToFront();
@@ -53,7 +56,7 @@ namespace _2nd_POS.POSUI
 
         private void button14_Click(object sender, EventArgs e)
         {
-            logisAccept = new LogisAccept();
+            logisAccept = new LogisAcceptControl();
             logisAccept.Location = new Point(0, 0);
             this.Controls.Add(logisAccept);
             logisAccept.BringToFront();
@@ -61,10 +64,26 @@ namespace _2nd_POS.POSUI
 
         private void button12_Click(object sender, EventArgs e)
         {
-            logisReceive = new LogisReceive();
+            logisReceive = new LogisReceiveControl();
             logisReceive.Location = new Point(0, 0);
             this.Controls.Add(logisReceive);
             logisReceive.BringToFront();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            trafficCard = new TrafficCardControl();
+            trafficCard.Location = new Point(0, 0);
+            this.Controls.Add(trafficCard);
+            trafficCard.BringToFront();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            tmoney = new TmoneyControl();
+            tmoney.Location = new Point(0, 0);
+            this.Controls.Add(tmoney);
+            tmoney.BringToFront();
         }
     }
 }

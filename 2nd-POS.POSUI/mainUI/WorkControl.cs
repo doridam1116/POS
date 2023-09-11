@@ -81,7 +81,7 @@ namespace _2nd_POS.POSUI
             }
 
                 data = "{\"employeeNo\":\"" + employee.employeeNo + "\"}";
-
+                
                 string result = await api.post(url, data);
 
             MessageObj message = JsonConvert.DeserializeObject<MessageObj>(result);

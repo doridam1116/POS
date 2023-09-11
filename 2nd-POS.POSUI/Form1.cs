@@ -56,7 +56,7 @@ namespace POSUI
         {
             foreach(Label bookmark in bookmarkPanel.Controls)
             {
-                if(bookmark.Text == "")
+                if(bookmark.Tag == null)
                 {
                     bookmark.Image = Image.FromFile("C:\\Users\\Com\\source\\repos\\2nd-POS\\2nd-POS.POSUI\\Properties\\plusBtn.png");
                 }
@@ -135,5 +135,12 @@ namespace POSUI
             change.BringToFront();
         }
 
+        private void bookmark1_Click(object sender, EventArgs e)
+        {
+            if(bookmark1.Tag == null)
+            {
+
+            }
+        }
     }
 }

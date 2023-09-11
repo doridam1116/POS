@@ -132,7 +132,6 @@
             // 
             // bookmark6
             // 
-            this.bookmark6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bookmark6.Location = new System.Drawing.Point(782, 15);
             this.bookmark6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark6.Name = "bookmark6";
@@ -141,7 +140,6 @@
             // 
             // bookmark5
             // 
-            this.bookmark5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bookmark5.Location = new System.Drawing.Point(632, 15);
             this.bookmark5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark5.Name = "bookmark5";
@@ -150,7 +148,6 @@
             // 
             // bookmark4
             // 
-            this.bookmark4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bookmark4.Location = new System.Drawing.Point(475, 15);
             this.bookmark4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark4.Name = "bookmark4";
@@ -159,7 +156,6 @@
             // 
             // bookmark3
             // 
-            this.bookmark3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bookmark3.Location = new System.Drawing.Point(325, 15);
             this.bookmark3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark3.Name = "bookmark3";
@@ -168,7 +164,6 @@
             // 
             // bookmark2
             // 
-            this.bookmark2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bookmark2.Location = new System.Drawing.Point(169, 15);
             this.bookmark2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark2.Name = "bookmark2";
@@ -177,12 +172,12 @@
             // 
             // bookmark1
             // 
-            this.bookmark1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bookmark1.Location = new System.Drawing.Point(16, 15);
             this.bookmark1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark1.Name = "bookmark1";
             this.bookmark1.Size = new System.Drawing.Size(135, 149);
             this.bookmark1.TabIndex = 0;
+            this.bookmark1.Click += new System.EventHandler(this.bookmark1_Click);
             // 
             // label8
             // 

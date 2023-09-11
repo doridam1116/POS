@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _2nd_POS.POSUI
 {
-    public partial class LogisAccept : UserControl
+    public partial class SportsToToControl : UserControl
     {
-        public LogisAccept()
+        public SportsToToControl()
         {
             InitializeComponent();
         }
