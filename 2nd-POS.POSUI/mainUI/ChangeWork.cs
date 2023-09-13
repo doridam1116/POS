@@ -25,8 +25,8 @@ namespace _2nd_POS.POSUI
 
         private  void button3_Click_1(object sender, EventArgs e)
         {
-            this.Controls.Remove(this);
-            this.Dispose();
+            this.Visible = false;
+
         }
 
         private async void button1_Click(object sender, EventArgs e)

@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using _2nd_POS.POSUI;
+using _2nd_POS.POSUI.inventory;
+using _2nd_POS.POSUI.service;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace POSUI
@@ -23,7 +25,23 @@ namespace POSUI
         PriceReceiptControl receipt;
         WorkControl work;
         ChangeWorkControl change;
-        IniFile ini; 
+        CashBoxControl cashBoxControl;
+        DisposeControl dispose;
+        IncomeControl income;
+        LogisAcceptControl logisAccept;
+        LogisConfirmControl logisConfirm;
+        MissStockRegistercontrol misstockRegister;
+        StockControl stockRegister;
+        LottoControl lotto;
+        SportsToToControl sportToTo;
+        TmoneyControl tmoney;
+        TrafficCardControl trafficCard;
+
+        IniFile ini;
+
+
+        Dictionary<string, Control> controlDictionary = new Dictionary<string, Control>();
+
 
 
         public Form1()
@@ -41,7 +59,10 @@ namespace POSUI
 
 
             workerName.Text = ini["Setting"]["employeeName"].ToString();
+            branchName.Text = ini["Setting"]["branchName"].ToString();
 
+            menu = new menuControl();
+            BookMarkInit();
             bookmarkLoad();
         }
 
@@ -56,16 +77,28 @@ namespace POSUI
         {
             foreach(Label bookmark in bookmarkPanel.Controls)
             {
-                if(bookmark.Tag == null)
+                bookmark.Tag = ini["BookMarker"][bookmark.TabIndex.ToString()].ToString();
+
+                if (bookmark.Tag.ToString() == "")
                 {
-                    bookmark.Image = Image.FromFile("C:\\Users\\Com\\source\\repos\\2nd-POS\\2nd-POS.POSUI\\Properties\\plusBtn.png");
+                    bookmark.Image = _2nd_POS.POSUI.Properties.Resources.plusBtn;
+                    continue;
                 }
+                
+                bookmark.Text = controlDictionary[bookmark.Tag.ToString()].Controls.Find("label1",true).FirstOrDefault().Text;
+                bookmark.BorderStyle = BorderStyle.FixedSingle;
+
             }
         }
 
+        private void BookmarkInit(object sender, EventArgs e)
+        {
+                
+        }
+
+
         private void button5_Click(object sender, EventArgs e)
         {
-            menu = new menuControl();
             menu.Location = new Point(0, 0);
             menu.Visible = true;
             this.Controls.Add(menu);
@@ -137,10 +170,82 @@ namespace POSUI
 
         private void bookmark1_Click(object sender, EventArgs e)
         {
-            if(bookmark1.Tag == null)
-            {
+            Control c = controlDictionary[bookmark0.Tag.ToString()];
+            c.Location = new Point(0, 0);
+            c.Visible = true;
+            this.Controls.Add(c);
+            c.BringToFront();
+        }
 
-            }
+        private void bookmark1_Click_1(object sender, EventArgs e)
+        {
+            Control c = controlDictionary[bookmark1.Tag.ToString()];
+            c.Location = new Point(0, 0);
+            c.Visible = true;
+            this.Controls.Add(c);
+            c.BringToFront();
+
+        }
+
+        private void bookmark2_Click(object sender, EventArgs e)
+        {
+            Control c = controlDictionary[bookmark2.Tag.ToString()];
+            c.Location = new Point(0, 0);
+            c.Visible = true;
+            this.Controls.Add(c);
+            c.BringToFront();
+
+        }
+
+        private void bookmark3_Click(object sender, EventArgs e)
+        {
+            Control c = controlDictionary[bookmark3.Tag.ToString()];
+            c.Location = new Point(0, 0);
+            c.Visible = true;
+            this.Controls.Add(c);
+            c.BringToFront();
+
+        }
+
+        private void bookmark4_Click(object sender, EventArgs e)
+        {
+            Control c = controlDictionary[bookmark4.Tag.ToString()];
+            c.Location = new Point(0, 0);
+            c.Visible = true;
+            this.Controls.Add(c);
+            c.BringToFront();
+
+        }
+
+        private void bookmark5_Click(object sender, EventArgs e)
+        {
+            Control c = controlDictionary[bookmark5.Tag.ToString()];
+            c.Location = new Point(0, 0);
+            c.Visible = true;
+            this.Controls.Add(c);
+            c.BringToFront();
+
+        }
+
+        private void BookMarkInit()
+        {
+
+            controlDictionary["cashBoxControl"] = new CashBoxControl();
+            controlDictionary["dispose"] = new DisposeControl();
+            controlDictionary["income"] = new IncomeControl();
+            controlDictionary["logisAccept"] = new LogisAcceptControl();
+            controlDictionary["logisConfirm"] = new LogisConfirmControl();
+            controlDictionary["misstockRegister"] = new MissStockRegistercontrol();
+            controlDictionary["stockRegister"] = new StockControl();
+            controlDictionary["lotto"] = new LottoControl();
+            controlDictionary["sportToTo"] = new SportsToToControl();
+            controlDictionary["tmoney"] = new TmoneyControl();
+            controlDictionary["trafficCard"] = new TrafficCardControl();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

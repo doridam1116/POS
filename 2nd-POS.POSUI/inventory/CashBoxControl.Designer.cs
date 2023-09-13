@@ -1,6 +1,6 @@
 ﻿namespace _2nd_POS.POSUI.inventory
 {
-    partial class IncomeControl
+    partial class CashBoxControl
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.

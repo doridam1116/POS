@@ -76,6 +76,43 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="inventory\DisposeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventory\DisposeControl.Designer.cs">
+      <DependentUpon>DisposeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventory\CashBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventory\CashBoxControl.Designer.cs">
+      <DependentUpon>CashBoxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventory\IncomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventory\IncomeControl.Designer.cs">
+      <DependentUpon>IncomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventory\LogisConfirmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventory\LogisConfirmControl.Designer.cs">
+      <DependentUpon>LogisConfirmControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventory\MissStockRegistercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventory\MissStockRegistercontrol.Designer.cs">
+      <DependentUpon>MissStockRegistercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventory\StockControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventory\StockControl.Designer.cs">
+      <DependentUpon>StockControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainUI\Bookmark.cs" />
     <Compile Include="service\LogisAcceptControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,10 +150,10 @@
       <DependentUpon>TrafficCardControl.cs</DependentUpon>
     </Compile>
     <Compile Include="util\Ini.cs" />
-    <Compile Include="mainUI\InventoryControl.cs">
+    <Compile Include="inventory\InventoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="mainUI\InventoryControl.Designer.cs">
+    <Compile Include="inventory\InventoryControl.Designer.cs">
       <DependentUpon>InventoryControl.cs</DependentUpon>
     </Compile>
     <Compile Include="mainUI\menuControl.cs">
@@ -170,7 +207,25 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mainUI\InventoryControl.resx">
+    <EmbeddedResource Include="inventory\DisposeControl.resx">
+      <DependentUpon>DisposeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory\CashBoxControl.resx">
+      <DependentUpon>CashBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory\IncomeControl.resx">
+      <DependentUpon>IncomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory\LogisConfirmControl.resx">
+      <DependentUpon>LogisConfirmControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory\MissStockRegistercontrol.resx">
+      <DependentUpon>MissStockRegistercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory\StockControl.resx">
+      <DependentUpon>StockControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory\InventoryControl.resx">
       <DependentUpon>InventoryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="service\LogisAcceptControl.resx">
@@ -211,6 +266,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="mainUI\SalesControl.resx">
       <DependentUpon>SalesControl.cs</DependentUpon>
@@ -237,6 +293,54 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\plusBtn.png" />
+    <None Include="Resources\img.jpg" />
+    <None Include="Resources\img2.jpg" />
+    <None Include="Resources\productSalesBtn.png" />
+    <None Include="Resources\billSearch.png" />
+    <None Include="Resources\cashWork.png" />
+    <None Include="Resources\serviceSales.png" />
+    <None Include="Resources\serviceSales2.png" />
+    <None Include="Resources\plusBtn.png" />
+    <None Include="Resources\menuBtn.png" />
+    <None Include="Resources\inoutWork.png" />
+    <None Include="Resources\menuBtn2.png" />
+    <None Include="Resources\menuBtn3.png" />
+    <None Include="Resources\todoBtn.png" />
+    <None Include="Resources\todoBtn2.png" />
+    <None Include="Resources\todoBtn3.png" />
+    <None Include="Resources\memberBtn.png" />
+    <None Include="Resources\cardBtn.png" />
+    <None Include="Resources\cashBtn.png" />
+    <None Include="Resources\kakaoBtn.png" />
+    <None Include="Resources\giftconBtn.png" />
+    <None Include="Resources\searchBtn.png" />
+    <None Include="Resources\workBtn.png" />
+    <None Include="Resources\workBtn2.png" />
+    <None Include="Resources\billSearch2.png" />
+    <None Include="Resources\billSearch3.png" />
+    <None Include="Resources\changeBtn.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\profile2.png" />
+    <None Include="Resources\lottoImg.png" />
+    <None Include="Resources\cashWorkforMenu.png" />
+    <None Include="Resources\logisBtn.png" />
+    <None Include="Resources\sportTotoBtn.png" />
+    <None Include="Resources\pickup.png" />
+    <None Include="Resources\tmoney.png" />
+    <None Include="Resources\pickup2.png" />
+    <None Include="Resources\Tcard.png" />
+    <None Include="Resources\idCard.png" />
+    <None Include="Resources\productMenu.png" />
+    <None Include="Resources\biiMenu.png" />
+    <None Include="Resources\batteryCharge.png" />
+    <None Include="Resources\InventoryIn.png" />
+    <None Include="Resources\InventoryIn2.png" />
+    <None Include="Resources\InventoryIn3.png" />
+    <None Include="Resources\disposeIncon.png" />
+    <None Include="Resources\cashBoxIcon.png" />
+    <None Include="Resources\incomeIcon.png" />
+    <None Include="Resources\innoutIcon.png" />
+    <None Include="Resources\logisConfirm.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\2nd-POS.DataAccess\2nd-POS.DataAccess.csproj">

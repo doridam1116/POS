@@ -35,15 +35,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.bookmarkPanel = new System.Windows.Forms.Panel();
-            this.bookmark6 = new System.Windows.Forms.Label();
             this.bookmark5 = new System.Windows.Forms.Label();
             this.bookmark4 = new System.Windows.Forms.Label();
             this.bookmark3 = new System.Windows.Forms.Label();
             this.bookmark2 = new System.Windows.Forms.Label();
             this.bookmark1 = new System.Windows.Forms.Label();
+            this.bookmark0 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.branchName = new System.Windows.Forms.Label();
             this.workerName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -118,66 +119,83 @@
             // 
             this.bookmarkPanel.BackColor = System.Drawing.Color.White;
             this.bookmarkPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bookmarkPanel.Controls.Add(this.bookmark6);
             this.bookmarkPanel.Controls.Add(this.bookmark5);
             this.bookmarkPanel.Controls.Add(this.bookmark4);
             this.bookmarkPanel.Controls.Add(this.bookmark3);
             this.bookmarkPanel.Controls.Add(this.bookmark2);
             this.bookmarkPanel.Controls.Add(this.bookmark1);
+            this.bookmarkPanel.Controls.Add(this.bookmark0);
             this.bookmarkPanel.Location = new System.Drawing.Point(42, 527);
             this.bookmarkPanel.Margin = new System.Windows.Forms.Padding(2);
             this.bookmarkPanel.Name = "bookmarkPanel";
-            this.bookmarkPanel.Size = new System.Drawing.Size(937, 182);
+            this.bookmarkPanel.Size = new System.Drawing.Size(937, 164);
             this.bookmarkPanel.TabIndex = 4;
-            // 
-            // bookmark6
-            // 
-            this.bookmark6.Location = new System.Drawing.Point(782, 15);
-            this.bookmark6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.bookmark6.Name = "bookmark6";
-            this.bookmark6.Size = new System.Drawing.Size(135, 149);
-            this.bookmark6.TabIndex = 5;
             // 
             // bookmark5
             // 
-            this.bookmark5.Location = new System.Drawing.Point(632, 15);
+            this.bookmark5.Font = new System.Drawing.Font("휴먼모음T", 15F);
+            this.bookmark5.Location = new System.Drawing.Point(782, 15);
             this.bookmark5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark5.Name = "bookmark5";
-            this.bookmark5.Size = new System.Drawing.Size(135, 149);
-            this.bookmark5.TabIndex = 4;
+            this.bookmark5.Size = new System.Drawing.Size(135, 131);
+            this.bookmark5.TabIndex = 5;
+            this.bookmark5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bookmark5.Click += new System.EventHandler(this.bookmark5_Click);
             // 
             // bookmark4
             // 
-            this.bookmark4.Location = new System.Drawing.Point(475, 15);
+            this.bookmark4.Font = new System.Drawing.Font("휴먼모음T", 15F);
+            this.bookmark4.Location = new System.Drawing.Point(632, 15);
             this.bookmark4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark4.Name = "bookmark4";
-            this.bookmark4.Size = new System.Drawing.Size(135, 149);
-            this.bookmark4.TabIndex = 3;
+            this.bookmark4.Size = new System.Drawing.Size(135, 131);
+            this.bookmark4.TabIndex = 4;
+            this.bookmark4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bookmark4.Click += new System.EventHandler(this.bookmark4_Click);
             // 
             // bookmark3
             // 
-            this.bookmark3.Location = new System.Drawing.Point(325, 15);
+            this.bookmark3.Font = new System.Drawing.Font("휴먼모음T", 15F);
+            this.bookmark3.Location = new System.Drawing.Point(475, 15);
             this.bookmark3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark3.Name = "bookmark3";
-            this.bookmark3.Size = new System.Drawing.Size(135, 149);
-            this.bookmark3.TabIndex = 2;
+            this.bookmark3.Size = new System.Drawing.Size(135, 131);
+            this.bookmark3.TabIndex = 3;
+            this.bookmark3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bookmark3.Click += new System.EventHandler(this.bookmark3_Click);
             // 
             // bookmark2
             // 
-            this.bookmark2.Location = new System.Drawing.Point(169, 15);
+            this.bookmark2.Font = new System.Drawing.Font("휴먼모음T", 15F);
+            this.bookmark2.Location = new System.Drawing.Point(325, 15);
             this.bookmark2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark2.Name = "bookmark2";
-            this.bookmark2.Size = new System.Drawing.Size(135, 149);
-            this.bookmark2.TabIndex = 1;
+            this.bookmark2.Size = new System.Drawing.Size(135, 131);
+            this.bookmark2.TabIndex = 2;
+            this.bookmark2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bookmark2.Click += new System.EventHandler(this.bookmark2_Click);
             // 
             // bookmark1
             // 
-            this.bookmark1.Location = new System.Drawing.Point(16, 15);
+            this.bookmark1.Font = new System.Drawing.Font("휴먼모음T", 15F);
+            this.bookmark1.Location = new System.Drawing.Point(169, 15);
             this.bookmark1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookmark1.Name = "bookmark1";
-            this.bookmark1.Size = new System.Drawing.Size(135, 149);
-            this.bookmark1.TabIndex = 0;
-            this.bookmark1.Click += new System.EventHandler(this.bookmark1_Click);
+            this.bookmark1.Size = new System.Drawing.Size(135, 131);
+            this.bookmark1.TabIndex = 1;
+            this.bookmark1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bookmark1.Click += new System.EventHandler(this.bookmark1_Click_1);
+            // 
+            // bookmark0
+            // 
+            this.bookmark0.Font = new System.Drawing.Font("휴먼모음T", 15F);
+            this.bookmark0.Location = new System.Drawing.Point(16, 15);
+            this.bookmark0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bookmark0.Name = "bookmark0";
+            this.bookmark0.Size = new System.Drawing.Size(135, 131);
+            this.bookmark0.TabIndex = 0;
+            this.bookmark0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bookmark0.Click += new System.EventHandler(this.bookmark1_Click);
             // 
             // label8
             // 
@@ -206,6 +224,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.panel2.Controls.Add(this.branchName);
             this.panel2.Controls.Add(this.workerName);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button7);
@@ -220,6 +239,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 112);
             this.panel2.TabIndex = 9;
+            // 
+            // branchName
+            // 
+            this.branchName.AutoSize = true;
+            this.branchName.Font = new System.Drawing.Font("휴먼모음T", 20F);
+            this.branchName.ForeColor = System.Drawing.Color.White;
+            this.branchName.Location = new System.Drawing.Point(800, 78);
+            this.branchName.Name = "branchName";
+            this.branchName.Size = new System.Drawing.Size(0, 30);
+            this.branchName.TabIndex = 15;
             // 
             // workerName
             // 
@@ -359,24 +388,25 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel bookmarkPanel;
-        private System.Windows.Forms.Label bookmark2;
         private System.Windows.Forms.Label bookmark1;
-        private System.Windows.Forms.Label bookmark5;
+        private System.Windows.Forms.Label bookmark0;
         private System.Windows.Forms.Label bookmark4;
         private System.Windows.Forms.Label bookmark3;
+        private System.Windows.Forms.Label bookmark2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label bookmark6;
+        private System.Windows.Forms.Label bookmark5;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label workerName;
+        private System.Windows.Forms.Label branchName;
     }
 }
 

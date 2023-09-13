@@ -16,5 +16,11 @@ namespace _2nd_POS.POSUI.service
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+
+        }
     }
 }

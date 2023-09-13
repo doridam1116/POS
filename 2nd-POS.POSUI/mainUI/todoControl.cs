@@ -35,8 +35,8 @@ namespace _2nd_POS.POSUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Controls.Remove(this);
-            this.Dispose();
+            this.Visible = false;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

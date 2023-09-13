@@ -41,7 +41,7 @@ namespace _2nd_POS.DataAccess
 
         public POSDBA()
         {
-            this.Sqlcon = new SqlConnection();
+            this.Sqlcon = new SqlConnection("Server=DESKTOP-2JR8DHM;Database=2nd-POS;Integrated Security=True;");
             Sqlcon.Open();
         }
     }

@@ -46,6 +46,8 @@ namespace POS_System
                 ini["Setting"]["uuid"] = uuidTextBox.Text;
                 ini["Setting"]["employee"] = numberTextBox.Text;
                 ini["Setting"]["employeeName"] = branch.employeeName;
+                ini["Setting"]["branchName"] = branch.branchName;
+
                 ini.Save("C:\\2nd-POS\\setting.ini");
 
                 showMsg.Text = "저장이 완료되었습니다.";

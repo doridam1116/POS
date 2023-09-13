@@ -37,9 +37,9 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.sportToToBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lottoBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -48,13 +48,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -118,9 +118,9 @@
             this.panel3.Controls.Add(this.button11);
             this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.sportToToBtn);
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.lottoBtn);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(24, 148);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
@@ -163,17 +163,17 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button4
+            // sportToToBtn
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(-1, 106);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(309, 60);
-            this.button4.TabIndex = 5;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.sportToToBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sportToToBtn.BackgroundImage")));
+            this.sportToToBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sportToToBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sportToToBtn.Location = new System.Drawing.Point(-1, 106);
+            this.sportToToBtn.Name = "sportToToBtn";
+            this.sportToToBtn.Size = new System.Drawing.Size(309, 60);
+            this.sportToToBtn.TabIndex = 5;
+            this.sportToToBtn.UseVisualStyleBackColor = true;
+            this.sportToToBtn.Click += new System.EventHandler(this.sportToToBtn_Click);
             // 
             // button3
             // 
@@ -187,17 +187,17 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // lottoBtn
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(-1, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(309, 60);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.lottoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lottoBtn.BackgroundImage")));
+            this.lottoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lottoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lottoBtn.Location = new System.Drawing.Point(-1, 47);
+            this.lottoBtn.Name = "lottoBtn";
+            this.lottoBtn.Size = new System.Drawing.Size(309, 60);
+            this.lottoBtn.TabIndex = 3;
+            this.lottoBtn.UseVisualStyleBackColor = true;
+            this.lottoBtn.Click += new System.EventHandler(this.Lotto_Click_1);
             // 
             // label6
             // 
@@ -303,6 +303,28 @@
             this.panel1.Size = new System.Drawing.Size(309, 498);
             this.panel1.TabIndex = 16;
             // 
+            // button17
+            // 
+            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Location = new System.Drawing.Point(-1, 342);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(309, 60);
+            this.button17.TabIndex = 13;
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button16.BackgroundImage")));
+            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Location = new System.Drawing.Point(-1, 283);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(309, 60);
+            this.button16.TabIndex = 12;
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // button12
             // 
             this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
@@ -362,28 +384,6 @@
             this.label2.Text = "수불 업무";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button16
-            // 
-            this.button16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button16.BackgroundImage")));
-            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Location = new System.Drawing.Point(-1, 283);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(309, 60);
-            this.button16.TabIndex = 12;
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Location = new System.Drawing.Point(-1, 342);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(309, 60);
-            this.button17.TabIndex = 13;
-            this.button17.UseVisualStyleBackColor = true;
-            // 
             // menuControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -413,10 +413,10 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button lottoBtn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button sportToToBtn;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button2;

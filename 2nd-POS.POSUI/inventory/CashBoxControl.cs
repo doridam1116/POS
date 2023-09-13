@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace _2nd_POS.POSUI.inventory
 {
-    public partial class IncomeControl : UserControl
+    public partial class CashBoxControl : UserControl
     {
-        public IncomeControl()
+        public CashBoxControl()
         {
             InitializeComponent();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            this.Controls.Remove(this);
+            this.Visible = false;
         }
     }
 }

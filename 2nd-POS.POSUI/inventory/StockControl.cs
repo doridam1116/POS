@@ -19,8 +19,8 @@ namespace _2nd_POS.POSUI.inventory
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Controls.Remove(this);
-            this.Dispose();
+            this.Visible = false;
+
         }
     }
 }

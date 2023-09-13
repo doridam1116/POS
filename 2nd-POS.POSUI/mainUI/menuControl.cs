@@ -24,8 +24,7 @@ namespace _2nd_POS.POSUI
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            this.Controls.Remove(this);
-            this.Dispose();
+            this.Visible = false;
 
         }
 
@@ -39,7 +38,7 @@ namespace _2nd_POS.POSUI
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Lotto_Click_1(object sender, EventArgs e)
         {
             lotto = new LottoControl();
             lotto.Location = new Point(0, 0);
@@ -63,12 +62,25 @@ namespace _2nd_POS.POSUI
             logisReceive.BringToFront();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void sportToToBtn_Click(object sender, EventArgs e)
         {
             sportsToTo = new SportsToToControl();
             sportsToTo.Location = new Point(0, 0);
             this.Controls.Add(sportsToTo);
             sportsToTo.BringToFront();
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+        }
+
+        public void bookMarkOnClick(object sender, EventArgs e)
+        {
+            button6_Click(sender, e);
+        }
+
+
+
+
     }
 }
